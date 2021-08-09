@@ -11,13 +11,15 @@
     <section>
         <h1>Check Profit/Loss on your Stock</h1>
         <div id="input-div">
-            <label for="input">Enter stock purchase price: </label>
-            <input type="number" class="input" required>
-            <label for="input">Enter stock quantity: </label>
-            <input type="number" class="input" required>
-            <label for="input">Enter stock current price: </label>
-            <input type="number" class="input" required>
+            <label for="input" >Stock purchase: </label>
+            <input type="number" placeholder="Enter Cost Price of Stock" class="input" required>
+            <label for="input">Stock quantity: </label>
+            <input type="number" placeholder="Enter Quantity of Stock" class="input" required>
+            <label for="input">Stock current price: </label>
+            <input type="number" placeholder="Enter Current Price of Stock"  class="input" required> 
         </div>
+        <button id="btn-check">Check</button>
+        <div id="ouput-div"></div>
     </section>
     <script src="/app.js"></script>
 </body>

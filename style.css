@@ -1,8 +1,18 @@
 body {
     text-align: center;
+    font-size: 1.2rem;
 }
 
 input {
     display: block;
-    margin: 20px auto;
+    margin: 0px auto 20px;
+    padding: .7rem;
+    max-width: 400px;
+}
+
+button {
+    padding: .7rem 1.5rem;
+    border-radius: 3px;
+    border: 1px solid black;
+    cursor: pointer; 
 }
