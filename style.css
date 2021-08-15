@@ -1,18 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+:root {
+    --primary-color:rgb(77, 14, 136);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
 body {
+    box-sizing: border-box;
     text-align: center;
     font-size: 1.2rem;
+    font-family: 'Josefin Sans', sans-serif;
+    color:var(--primary-color) ;
+    background-color:lightskyblue;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    font-family: 'Staatliches', cursive;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 15px;
 }
 
 input {
-    display: block;
-    margin: 0px auto 20px;
-    padding: .7rem;
+    padding: 10px;
     max-width: 400px;
 }
 
 button {
-    padding: .7rem 1.5rem;
+    margin: 30px auto;
+    padding: 10px 20px;
+    display: block;
+    font-size: 1.1rem;
+    cursor: pointer;
     border-radius: 3px;
-    border: 1px solid black;
-    cursor: pointer; 
+    color: var(--primary-color);
+    background-color:transparent;
+    border: 2px solid var(--primary-color);
+    transition: all 0.25s ease-in-out 0s;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#output-div {
+    margin: 20px;
+    padding: 10px;
+    font-size: 1.3rem;
+}
+
+/* footer */
+
+footer {
+    min-height: 6vh;
+}
+
+footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+}
+
+footer ul li {
+    list-style: none;
+    margin: 10px;
+    padding: 5px;
+}
+
+footer ul li a {
+    color: rgb(77, 14, 136);
 }
