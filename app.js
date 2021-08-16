@@ -27,7 +27,7 @@ function calculateProfit(initial, curr, qty ){
         let lossPercent = ((loss / initial) * 100).toFixed(2);
         outputBox.innerText = `your loss is ${lossPercent}% which is ₹${loss} 🥺`
         if(lossPercent >= 50){
-            body.style.backgroundColor = "red";
+            body.style.backgroundColor = "rgb(241, 91, 91)";
         }else{
             body.style.backgroundColor = "green";
         }
