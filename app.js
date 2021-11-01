@@ -16,7 +16,7 @@ function checkHandler(){
     if(ip && curr && qty){
         calculateProfit(ip,curr,qty)
     }else{
-        outputBox.innerText = "Please enter Initial Price, Quantity & Current Price of the Stocks!"
+        outputBox.innerText = "Please enter Initial Price, Quantity & Current Price of the Stocks"
     }
 }
 
