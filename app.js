@@ -6,8 +6,6 @@ const outputBox = document.querySelector("#output-div");
 const body = document.querySelector('body')
 
 
-btnCheck.addEventListener('click', checkHandler)
-
 function checkHandler(){
     const ip = Number(initialPrice.value);
     const curr = Number(currentPrice.value);
@@ -16,7 +14,7 @@ function checkHandler(){
     if(ip && curr && qty){
         calculateProfit(ip,curr,qty)
     }else{
-        outputBox.innerText = "Please enter Initial Price, Quantity & Current Price of the Stocks"
+        outputBox.innerText = "Please enter Initial Price, Quantity & Current Price of the Stocks!"
     }
 }
 
@@ -26,7 +24,12 @@ function calculateProfit(initial, curr, qty ){
         let loss = (initial - curr) * qty;
         let lossPercent = ((loss / initial) * 100).toFixed(2);
         outputBox.innerText = `your loss is ${lossPercent}% which is ₹${loss} 🥺`
-        changeBgColor(lossPercent);
+        if(lossPercent >= 50){
+            body.style.backgroundColor = "red";
+        }else{
+            body.style.backgroundColor = "green";
+        }
+        
     }else if(curr> initial){
         let profit = (curr - initial) * qty;
         let profitPercent = ((profit / initial) * 100).toFixed(2);
@@ -35,13 +38,5 @@ function calculateProfit(initial, curr, qty ){
     }else {
         outputBox.innerText = "no pain no gain and no gain no pain!"
         body.style.backgroundColor = "paleturquoise"
-    }
-}
-
-function changeBgColor(x){
-    if(x >= 50){
-        body.classList.add('redBgColor')
-    }else{
-        body.classList.remove('greenBgColor')
     }
 }
