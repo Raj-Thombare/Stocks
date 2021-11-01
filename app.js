@@ -26,12 +26,7 @@ function calculateProfit(initial, curr, qty ){
         let loss = (initial - curr) * qty;
         let lossPercent = ((loss / initial) * 100).toFixed(2);
         outputBox.innerText = `your loss is ${lossPercent}% which is ₹${loss} 🥺`
-        if(lossPercent >= 50){
-            body.style.backgroundColor = "rgb(241, 91, 91)";
-        }else{
-            body.style.backgroundColor = "green";
-        }
-        
+        changeBgColor(lossPercent);
     }else if(curr> initial){
         let profit = (curr - initial) * qty;
         let profitPercent = ((profit / initial) * 100).toFixed(2);
@@ -40,5 +35,13 @@ function calculateProfit(initial, curr, qty ){
     }else {
         outputBox.innerText = "no pain no gain and no gain no pain!"
         body.style.backgroundColor = "paleturquoise"
+    }
+}
+
+function changeBgColor(x){
+    if(x >= 50){
+        body.classList.add('redBgColor')
+    }else{
+        body.classList.remove('greenBgColor')
     }
 }
