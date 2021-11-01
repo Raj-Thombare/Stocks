@@ -89,3 +89,11 @@ footer ul li {
 footer ul li a {
     color: rgb(77, 14, 136);
 }
+
+.greenBgColor {
+    background-color: green;
+}
+
+.redBgColor {
+    background-color: rgb(221, 65, 65);
+}
