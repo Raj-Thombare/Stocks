@@ -40,3 +40,4 @@ function calculateProfit(initial, curr, qty ){
         body.style.backgroundColor = "paleturquoise"
     }
 }
+btnCheck.addEventListener('click',checkHandler )
