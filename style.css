@@ -3,7 +3,7 @@
 
 :root {
     --primary-color:#181818;
-    bg-color: #8758FF;
+    --bg-color: #8758FF;
 }
 
 * {
