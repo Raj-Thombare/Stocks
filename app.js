@@ -7,14 +7,23 @@ const body = document.querySelector('body')
 
 
 function checkHandler(){
-    const ip = Number(initialPrice.value);
-    const curr = Number(currentPrice.value);
-    const qty = Number(quantity.value);
+    let IP = initialPrice.value;
+    let curr = currentPrice.value;
+    let qty = quantity.value;
 
-    if(ip && curr && qty){
-        calculateProfit(ip,curr,qty)
+    if(!isNaN(IP) && !isNaN(curr) && !isNaN(qty)){
+      IP = Number(IP);
+      curr = Number(curr);
+      qty = Number(qty);
+
+      if(IP > 0 && curr > 0 && qty > 0){
+        calculateProfit(IP,curr,qty)
+      }else{
+        outputBox.innerText = "Please enter values greater than 0 (only numbers are allowed in above fields)"
+      }
+      
     }else{
-        outputBox.innerText = "Please enter Initial Price, Quantity & Current Price of the Stocks!"
+        outputBox.innerText = "Please enter values greater than 0 (only numbers are allowed in above fields)"
     }
 }
 
