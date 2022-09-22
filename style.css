@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
 :root {
-    --primary-color:rgb(77, 14, 136);
-    color: rgb(241, 91, 91);
+    --primary-color:#181818;
+    bg-color: #8758FF;
 }
 
 * {
@@ -17,7 +17,7 @@ body {
     font-size: 1.2rem;
     font-family: 'Josefin Sans', sans-serif;
     color:var(--primary-color) ;
-    background-color:lightskyblue;
+    background-color:var(--bg-color);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -87,13 +87,5 @@ footer ul li {
 }
 
 footer ul li a {
-    color: rgb(77, 14, 136);
-}
-
-.greenBgColor {
-    background-color: green;
-}
-
-.redBgColor {
-    background-color: rgb(221, 65, 65);
+    color: var(--primary-color);
 }
